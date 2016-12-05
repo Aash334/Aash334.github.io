@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stefan's Portfolio</title>
+<link href="includes/portfoliocss.css" rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<!-- menu slide script -->
+<script>
+$(document).ready(function() {
+	/* menu close */
+	$('.c-menu__open').click(function() {
+		$('.c-menu--slide-left').toggle("slide");
+	});
+	/* hamburger function */
+	$('#menu-icon').click(function(){
+		$(this).toggleClass('open');
+		$('.c-menu--slide-left').toggle("slide");
+	});
+});
+</script>
+
+<body>
+<div id="container">
+<div id="pre-header">
+<!--user nav bar -->
+<div class="usernav">
+	<div class="wrap">
+		<div class="quick-link">
+			<ul class="pre-links">
+				<li><a href="main.html" title="Home">Home</a></li>
+				<li><a href="education.html" title="Education">Education</a></li>
+				<li>
+					<!----------google search ajax---------------------- -->
+					<!-- Credit/tutorial for google search implementation found here: https://davidwalsh.name/google-ajax-search -->
+					<form action="http://www.google.com/search" method="get">
+					<!-- HTML5 SEARCH BOX!  -->
+					<input type="search" id="search-box" name="q" results="5" placeholder="Search..." autocomplete="on" />
+					<!-- SEARCH davidwalsh.name ONLY! -->
+					<input type="hidden" name="sitesearch" />
+					<!-- SEARCH BUTTON -->
+					<input id="search-submit" type="submit" value="Search" />
+					</form>
+
+					<!-- ASYNCHRONOUSLY LOAD THE AJAX SEARCH API;  MOOTOOLS TOO! -->
+					<script type="text/javascript" src="http://www.google.com/jsapi?key=MY_REALLY_REALLY_REALLY_REALLY_REALLY_REALLY_LONG_KEY"></script>
+					<script type="text/javascript">
+						google.load('mootools','1.2.4');
+						google.load('search','1');
+					</script>
+				</li>
+		</div>
+	</div>
+</div>
+</div>	
+
+-->
+<!-- webpage title -->
+<div id="title">
+	<div class="wrap">
+		<div class="titlename">
+		</div>
+	</div>
+</div>
+
+<div id="section">
+	<div class="index">
+		<Article><p> I studied at Crafton Hills Community College and achieved my Associates of Science in Computer Information Systems with an Emphasis in Programming in June 2015.</p>
+		<p> Currently, I am studying at California State University San Bernardino for my Bachelor of Arts in Computer Systems with an Emphasis in System Administration and expect to graduate in March of 2018.</p>
+		<p> Languages that I have studied are: C++, Java, JavaScript, HTML5, PHP, SQL, and currently learning of the linux operating system and Unix commands.</p></article>
+	</div>
+</div>
+
+
+</div>
+<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+  <ul class="c-menu__items">
+
+												<div class="container-links">
+												  <div class="component">
+													<a class="icon icon-nudge twitter" href="https://twitter.com/Aash334">twitter</a>
+													<a class="icon icon-nudge googleplus" href="https://plus.google.com/u/1/114318502632591746823/about">google+</a>
+													<a class="icon icon-nudge github" href="https://github.com/Aash334">github</a>
+												  </div>
+											</div>
+  </ul>
+</nav>
+
+<!-- hamburger animated icon -->
+<div id="menu-icon">
+	<span></span>
+	<span></span>
+	<span></span>
+</div>
+</body>
+</html>
